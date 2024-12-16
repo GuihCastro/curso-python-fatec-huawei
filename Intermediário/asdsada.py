@@ -1,4 +1,14 @@
-numeros = ((1, 2, 3), (1, 2, 3), (4, 5, 6))
-conjunto_de_numeros = set(numeros)
+from rich.console import Console
+from rich.table import Table
 
-print(f'{conjunto_de_numeros=}')
+console = Console()
+console.print('Olá, [bold magenta]Rich[/bold magenta]!', style='bold blue')
+
+table = Table(title='Tabela de Exemplo')
+table.add_column('Nome', style='cyan')
+table.add_column('Idade', style='magenta')
+
+table.add_row('Alice', '24')
+table.add_row('Bob', "30")
+
+console.print(table)
